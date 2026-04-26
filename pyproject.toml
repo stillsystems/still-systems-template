@@ -1,0 +1,23 @@
+[project]
+name = "REPO_NAME"
+version = "0.1.0"
+description = "One-line elevator pitch goes here."
+readme = "README.md"
+requires-python = ">=3.12"
+license = {text = "MIT"}
+authors = [
+    {name = "Still Systems", email = "hello@stillsystems.com"},
+]
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
