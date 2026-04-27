@@ -41,4 +41,4 @@ This project is licensed under the MIT License.
 Documentation • [Issues](https://github.com/stillsystems/REPO_NAME/issues) • [Support](https://github.com/stillsystems/.github/blob/main/SUPPORT.md)
 
 ---
-⚓ **Still Systems** — Tools engineered for real-world conditions.
+🧱 **Still Systems** — Tools engineered for real-world conditions.
