@@ -1,0 +1,16 @@
+name: Still Systems Python Template
+description: A clean, standardized starting point for Python CLI tools using Ruff, Pytest, and Pydantic.
+language: python
+author: Still Systems
+version: 1.0.0
+features:
+  - id: cli
+    name: CLI Foundation
+    description: Add click-based CLI entry point
+    files:
+      - src/{{.Identifier}}/cli.py
+  - id: api
+    name: API Foundation
+    description: Add FastAPI boilerplate
+    files:
+      - src/{{.Identifier}}/api.py
