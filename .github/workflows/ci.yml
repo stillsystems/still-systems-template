@@ -6,6 +6,9 @@ on:
   pull_request:
     branches: [main]
 
+permissions:
+  contents: read
+
 jobs:
   python-ci:
     uses: stillsystems/.github/.github/workflows/reusable-python-ci.yml@main
