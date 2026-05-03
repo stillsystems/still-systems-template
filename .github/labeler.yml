@@ -1,0 +1,9 @@
+# Default Labeler configuration for Still Systems projects
+"area: documentation":
+  - any: ['**/*.md', 'docs/**']
+
+"area: github-actions":
+  - any: ['.github/workflows/**']
+
+"area: tests":
+  - any: ['tests/**', '**/*.test.*', '**/*_test.go']

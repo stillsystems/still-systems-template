@@ -2,28 +2,18 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
-  quality:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      
-      - name: Install uv
-        run: curl -LsSf https://astral.sh/uv/install.sh | sh
+  # Inherits standard CI logic from the organizational .github repository
+  go-ci:
+    # Set to true if this is a Go project, or use conditionals
+    if: false 
+    uses: stillsystems/.github/.github/workflows/reusable-go-ci.yml@main
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-
-      - name: Lint and Format
-        run: |
-          uv run ruff check .
-          uv run ruff format --check .
-
-      - name: Run Tests
-        run: uv run pytest
+  node-ci:
+    # Set to true if this is a Node project
+    if: false
+    uses: stillsystems/.github/.github/workflows/reusable-node-ci.yml@main
