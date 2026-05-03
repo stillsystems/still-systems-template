@@ -6,8 +6,14 @@ on:
   pull_request:
     branches: [main]
 
+permissions:
+  contents: read
+
 jobs:
   python-ci:
+    # Do not run on the template repository itself, as it contains raw templates that fail linting/testing.
+    # This will run on any repository created from this template.
+    if: github.repository != 'stillsystems/still-systems-template'
     uses: stillsystems/.github/.github/workflows/reusable-python-ci.yml@main
     with:
       python-version: '3.12'
